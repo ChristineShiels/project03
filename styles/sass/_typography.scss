@@ -6,20 +6,19 @@ body {
     color: $black;
     font-family: 'Montserrat', sans-serif;
     font-size: 2rem;
-    font-weight: 400;
+    font-weight: 700;
+    text-align: center;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Amarante', cursive;
     text-transform: uppercase;
-    text-align: center;
 }
 
 h1 {
     color: $white;
     font-size: 2.5rem;
     letter-spacing: 2px;
-    text-justify: justify;
 }
 
 h2 {
@@ -29,4 +28,8 @@ h2 {
 h3 {
     color: $primary;
     font-size: 6rem;
+}
+
+.choice {
+    color: $white;
 }

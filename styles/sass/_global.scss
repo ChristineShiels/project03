@@ -3,11 +3,35 @@ $primary: #009999;
 $secondary: #ffcc00;
 $tertiary: #f13d3d;
 $black: #242312;
-$white: #e7ffff;
+$white: #ffffff;
 
+// mixins
+
+@mixin outsideBorder {
+    border: 20px solid $primary;
+}
+
+@mixin insideBorder {
+    border: 15px solid $secondary;
+    box-shadow: -5px -5px $secondary, 5px -5px $secondary, -5px 5px $secondary, 5px 5px $secondary,;
+}
 
 
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
     padding: 0;
+}
+
+// spanx
+.wrapper {
+    max-width: 992px;
+    width: 85%;
+    margin: 0 auto;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
 }

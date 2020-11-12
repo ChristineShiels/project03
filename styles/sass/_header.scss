@@ -1,22 +1,8 @@
 // Background
 header {
     height: 100vh;
+    background-color: $white;
 }
-
-// spanx
-.wrapper {
-    max-width: 1280px;
-    width: 85%;
-    margin: 0 auto;
-}
-
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-}
-
 
 
 // title
@@ -40,28 +26,77 @@ hr {
 
 // image
 .graphic {
-    border: 20px solid $primary;
+    @include outsideBorder;
     border-radius: 150px 150px 0 0;
 }
 
 .coverImage {
-    max-height: 60vh;
-    border: 15px solid $secondary;
-    box-shadow: -5px -5px $secondary, 5px -5px $secondary, -5px 5px $secondary, 5px 5px $secondary;
+    // max-height: 55vh;
+    @include insideBorder;
+    border-bottom: none;
+    box-shadow: -5px -5px $secondary, 5px -5px $secondary,;
     border-radius: 130px 130px 0 0;
 }
 
 .coverBreakout {
-    width: 200px;
+    width: 250px;
     position: absolute;
-    top: 15%;
-    right: 65%;
+    top: 11%;
+    right: 62%;
     transform: rotate(-25deg);
 }
 
+.story {
+    background-color: $secondary;
+    @include insideBorder;
+    margin: 0;
+    padding: 0 3%;
+}
 
+.navigation {
+    display: flex;
+    flex-direction: row;
+    width: 92.5%;
+    height: 25vh;
+    @include outsideBorder;
+    border-top: none;
+    transform: translateY(-15px);
+    position: relative;
+}
+
+.navImg {
+    max-width: 50%;
+    @include insideBorder;
+    border-top: none;
+    position: cover;
+    // overflow: hidden;
+    
+}
+
+.navImg01 {
+    border-right: 10px solid $secondary;
+}
+
+.navImg02 {
+    border-left: 10px solid $secondary;
+}
+
+.choice {
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.choice01 {
+    top: 50%;
+    left: 25%;
+}
+
+.choice02{
+    top: 50%;
+    left: 75%;
+}
 
 
 fieldset {
-    visibility: hidden;
+    display: none;
 }

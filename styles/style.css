@@ -293,9 +293,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  color: #ffffff;
-  font-size: 2.5rem;
-  letter-spacing: 2px;
+  color: #3e90f4;
+  font-size: 6rem;
 }
 
 h2 {
@@ -303,23 +302,26 @@ h2 {
 }
 
 h3 {
-  color: #009999;
-  font-size: 6rem;
+  color: #ffffff;
+  background: #f13d3d;
+  padding: 1% 3%;
+  border-radius: 50px;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
 }
 
 .choice {
   color: #ffffff;
-}
-
-header {
-  height: 100vh;
-  background-color: #ffffff;
-}
-
-h1 {
   background: #f13d3d;
   padding: 1% 3%;
   border-radius: 50px;
+}
+
+header {
+  background-color: #ffffff;
+}
+
+h3 {
   width: 100%;
 }
 
@@ -334,12 +336,12 @@ hr {
   padding: 0;
 }
 
-.graphic {
-  border: 20px solid #009999;
+.mainGraphic {
+  border: 20px solid #3e90f4;
   border-radius: 150px 150px 0 0;
 }
 
-.coverImage {
+.mainImage {
   border: 15px solid #ffcc00;
   -webkit-box-shadow: -5px -5px #ffcc00, 5px -5px #ffcc00, -5px 5px #ffcc00, 5px 5px #ffcc00;
           box-shadow: -5px -5px #ffcc00, 5px -5px #ffcc00, -5px 5px #ffcc00, 5px 5px #ffcc00;
@@ -349,7 +351,7 @@ hr {
   border-radius: 130px 130px 0 0;
 }
 
-.coverBreakout {
+.breakout {
   width: 250px;
   position: absolute;
   top: 11%;
@@ -376,8 +378,7 @@ hr {
       -ms-flex-direction: row;
           flex-direction: row;
   width: 92.5%;
-  height: 25vh;
-  border: 20px solid #009999;
+  border: 20px solid #3e90f4;
   border-top: none;
   -webkit-transform: translateY(-15px);
           transform: translateY(-15px);
@@ -403,17 +404,16 @@ hr {
 
 .choice {
   position: absolute;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  max-width: 30%;
 }
 
 .choice01 {
-  top: 50%;
   left: 25%;
 }
 
 .choice02 {
-  top: 50%;
   left: 75%;
 }
 

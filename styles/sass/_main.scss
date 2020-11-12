@@ -1,0 +1,75 @@
+// image
+.mainGraphic {
+    @include outsideBorder;
+    border-radius: 150px 150px 0 0;
+}
+
+.mainImage {
+    // max-height: 55vh;
+    @include insideBorder;
+    border-bottom: none;
+    box-shadow: -5px -5px $secondary, 5px -5px $secondary,;
+    border-radius: 130px 130px 0 0;
+}
+
+.breakout {
+    width: 250px;
+    position: absolute;
+    top: 11%;
+    right: 62%;
+    transform: rotate(-25deg);
+}
+
+.story {
+    background-color: $secondary;
+    @include insideBorder;
+    margin: 0;
+    padding: 0 3%;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: row;
+    width: 92.5%;
+    // height: 25vh;
+    @include outsideBorder;
+    border-top: none;
+    transform: translateY(-15px);
+    position: relative;
+}
+
+.navImg {
+    max-width: 50%;
+    @include insideBorder;
+    border-top: none;
+    position: cover;
+    // overflow: hidden;
+    
+}
+
+.navImg01 {
+    border-right: 10px solid $secondary;
+}
+
+.navImg02 {
+    border-left: 10px solid $secondary;
+}
+
+.choice {
+    position: absolute;
+    transform: translate(-50%, 0);
+    max-width: 30%;
+}
+
+.choice01 {
+    left: 25%;
+}
+
+.choice02 {
+    left: 75%;
+}
+
+
+fieldset {
+    display: none;
+}

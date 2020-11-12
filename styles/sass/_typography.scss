@@ -16,9 +16,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    color: $white;
-    font-size: 2.5rem;
-    letter-spacing: 2px;
+    color: $primary;
+    font-size: 6rem;
 }
 
 h2 {
@@ -26,10 +25,13 @@ h2 {
 }
 
 h3 {
-    color: $primary;
-    font-size: 6rem;
+    color: $white;
+    @include redHighlight;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
 }
 
 .choice {
     color: $white;
+    @include redHighlight;
 }

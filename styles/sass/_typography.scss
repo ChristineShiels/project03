@@ -10,7 +10,7 @@ body {
     text-align: center;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, button {
     font-family: 'Amarante', cursive;
     text-transform: uppercase;
 }
@@ -24,7 +24,7 @@ h2 {
     font-size: 2rem;
 }
 
-h3 {
+h3, input[type="submit"] {
     color: $white;
     @include redHighlight;
     font-size: 2.5rem;
@@ -34,4 +34,8 @@ h3 {
 .choice {
     color: $white;
     @include redHighlight;
+}
+
+input {
+    font-family: 'Amarante', cursive;
 }

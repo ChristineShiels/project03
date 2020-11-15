@@ -1,125 +1,27 @@
 // set up data objects
+// Input variables
+const userInfo = {
+    name: '',
+    pet: '',
+    veg: '',
+    spice: '',
+    fruit: '',
+    flower: '',
+    fright: '',
+};
 
 const mainStory = [
-    {story: `You leave work on a    beautiful day and find $50 lying on the street.`,
-    storyPic: `./assets/street01.jpg`,
-    storyAlt: `A person walking the middle of the street, jumping for joy by @dre0316 on Unsplash`,
-    breakoutPic: `./assets/sun.gif`,
-    breakoutAlt: `an animated, handrawn sun`,
-    choice01: `Call a taxi to zip you home to play with your pet ${userInfo.pet}`,
-    choice01Pic: `./assets/taxi.jpg`,
-    choice01Alt: `A yellow taxi cab by @cioni_mattia on Unsplash`,
-    choice02: `Pocket the cash and enjoy the walk home`,
-    choice02Pic: `./assets/cannTireCash.jpg`,
-    choice02Alt: `Stacks of Canadian Tire money in a briefcase`,
-    ending: `You get stuck in traffic for hours, using up your whole $50 and get home very late and very tired.`,
-    endingPic: `./assets/traffic.jpg`,
-    endingAlt: `Traffic jam on a foggy night by @dylu at Unsplash`,
-    endingChoicePic: `A man walking dejectedly with his head down`,
-    endingChoiceAlt: `./assets/sadWalk.gif`,
-    endingBreakout: `./assets/oops.gif`,
-    endingBreakoutAlt: `Animated letters spelling "oops"`,
-    },
-
-    {story: `The day gets hotter as you pass by a bespoke frozen treat pop up shoppe, so you decide to treat yo'self. Do you choose:`,
-    storyPic: `./assets/gelatoShoppe.jpg`,
-    storyAlt: `Sign on the window of an artisan, handmade, gluten free & vegan gelato & sorbetto shop by @bubo at Unsplash`,
-    breakoutPic: `./assets/sweet.gif`,
-    breakoutAlt: `Animated letters spelling "sweet"`,
-    choice01: `A hand-churned ${userInfo.veg} ${userInfo.spice} gelato`,
-    choice01Pic: `./assets/bigIcecream.jpg`,
-    choice01Alt: `A large flower-shaped icecream scoop on a cone by  at Unsplash`,
-    choice02: `An organic, vegan ${userInfo.fruit} ${userInfo.flower} popsicle`,
-    choice02Pic: `./assets/bluePop.jpg`,
-    choice02Alt: `A blue, handmade popsicle with berries and flower petals by  at Unsplash`,
-    },
-
-    {story: `It's really getting hot out, the sweat is starting to drip off of you.`,
-    storyPic: `./assets/sweaty.jpg`,
-    storyAlt: `A person swaeting through the back of their shirt`,
-    breakoutPic: `./assets/hot.gif`,
-    breakoutAlt: `Animated letters spelling "hot"`,
-    choice01: `I love the heat, bring it on!`,
-    choice01Pic: `./assets/hotHotHeat.jpg`,
-    choice01Alt: `A man fanning himself in the heat, sitting atop a pedicar by @shandranick at Unsplash`,
-    choice02: `Switch to the shady side of the street`,
-    choice02Pic: `./assets/kangaShade.jpg`,
-    choice02Alt: `A kangaroo lounging in the shade by @amati913 at Unsplash`,
-    ending: `Your ${userInfo.treat} melts in the heat before you even finish half! You walk home to your pet ${userInfo.pet} sad and sweaty.`,
-    endingPic01: `./assets/melted.jpg`,
-    endingAlt01: `Icecream dropped and melted on the sidewalk by @pawelj at Unsplash`,
-    endingPic02: `./assets/melt.jpg`,
-    endingAlt02: `Melted green popsicle by @uniqueton at Unsplash`,
-    endingChoicePic: `A man walking dejectedly with his head down`,
-    endingChoiceAlt: `./assets/sadWalk.gif`,
-    endingBreakout: `./assets/oops.gif`,
-    endingBreakoutAlt: `Animated letters spelling "oops"`,
-    },
-
-    {story: `You enjoy your stroll until a crack of thunder rings out and rains pours down. There are only two places in sight to seek shelter from the raging storm:`,
-    storyPic: `./assets/storm.jpg`,
-    storyAlt: `Lighning striking a road in the middle of a field by @noaa at Unsplash`,
-    breakoutPic: `./assets/boom02.gif`,
-    breakoutAlt: `Animated letters spelling "boom" in a storm cloud`,
-    choice01: `Wait it out on the spooky porch`,
-    choice01Pic: `./assets/house.jpg`,
-    choice01Alt: `Abandoned, dilapidated house in Kamloops, BC by @yann_allegre at Unsplash`,
-    choice02: `Take your chances under the lonely tree`,
-    choice02Pic: `./assets/tree.jpg`,
-    choice02Alt: `Gnarled Japanese maple tree with red fall leaves by @fcornish at Unsplash`,
-    },
-
-    {story: `The rain gets even worse and you're soaked to the bone!`,
-    storyPic: `./assets/wet.jpg`,
-    storyAlt: `A soaking wet robin on a fence in the rain by @jcotten at Unsplash`,
-    breakoutPic: `./assets/rainCloud.gif`,
-    breakoutAlt: `an animated rain cloud`,
-    choice01: `Stick it out`,
-    choice01Pic: `./assets/stubbornRain.jpg`,
-    choice01Alt: `A woman waiting in the rain`,
-    choice02: `Run for it!`,
-    choice02Pic: `./assets/run.jpg`,
-    choice02Alt: `A person running away down a dark, wet street by @we_are_rising at Unsplash`,
-    ending: `The rain turns the street into a river, sweeping you downstream. You catch pneumonia and miss weeks of work.`,
-    endingPic: `./assets/flood.jpg`,
-    endingAlt: `Flood waters as deep as car roofs, flowing through a parking lot by @chriswebdog at Unsplash`,
-    endingChoicePic: `./assets/sick.gif`,
-    endingChoiceAlt: `A man lying in bed, sick`,
-    endingBreakout: `./assets/oops.gif`,
-    endingBreakoutAlt: `Animated letters spelling "oops"`,
-    },
-
-    {story: `As you take shelter on the porch, you see hordes of ${userInfo.fright} surrounding you, trying to stay dry.`,
-    storyPic: `./assets/porch.jpg`,
-    storyAlt: `An old wooden rocking chair on a porch`,
-    breakoutPic: `./assets/boo.gif`,
-    breakoutAlt: `animated letters spelling the word "boo"`,
-    choice01: `Try the doorbell`,
-    choice01Pic: `./assets/doorbell.jpg`,
-    choice01Alt: `Rusty, antique doorbell on an old, peeling wall by @__matthoffman__ at Unsplash`,
-    choice02: `That's it, I'm out of here!`,
-    choice02Pic: `./assets/scared02.jpg`,
-    choice02Alt: `Scared child with hands covering face by @caleb_woods at Unsplash`,
-    ending: `A sweet elderly lady welcomes you into her house for ${userInfo.fruit} cake and tea. While you dry off and wait out the storm, you both enjoy a Murder She Wrote marathon.`,
-    endingPic: `./assets/grandma.jpg`,
-    endingAlt: `Elderly lady smiling and eating cake`,
-    endingChoicePic: `./assets/murder.gif`,
-    endingChoiceAlt: `Elderly lady eating popcorn`,
-    endingBreakout: `./assets/yay.gif`,
-    endingBreakoutAlt: `animated letters spelling the word "yay"`,
-    },
-
-    {story: `Way too many ${userInfo.fright} come up from the sewer grate, surrounding you.`,
-    storyPic: `Person standing on top of sewer grate by Barik5ive at pexels.com`,
+    {story: ``,
+    storyPic: ``,
     storyAlt: ``,
     breakoutPic: ``,
     breakoutAlt: ``,
-    choice01: `Escape to the house`,
-    choice01Pic: `./assets/house.jpg`,
-    choice01Alt: `Abandoned, dilapidated house in Kamloops, BC by @yann_allegre at Unsplash`,
-    choice02: `Nope right out of there`,
-    choice02Pic: `./assets/scared03.jpg`,
-    choice02Alt: `person covering face with hands by Ian Panelo at pexels.com`,
+    choice01: ``,
+    choice01Pic: ``,
+    choice01Alt: ``,
+    choice02: ``,
+    choice02Pic: ``,
+    choice02Alt: ``,
     ending: ``,
     endingPic: ``,
     endingAlt: ``,
@@ -129,17 +31,488 @@ const mainStory = [
     endingBreakoutAlt: ``,
     },
 
-]
+    {story: ``,
+    storyPic: ``,
+    storyAlt: ``,
+    breakoutPic: ``,
+    breakoutAlt: ``,
+    choice01: ``,
+    choice01Pic: ``,
+    choice01Alt: ``,
+    choice02: ``,
+    choice02Pic: ``,
+    choice02Alt: ``,
+    ending: ``,
+    endingPic: ``,
+    endingAlt: ``,
+    endingChoicePic: ``,
+    endingChoiceAlt: ``,
+    endingBreakout: ``,
+    endingBreakoutAlt: ``,
+    },
+
+    {story: ``,
+    storyPic: ``,
+    storyAlt: ``,
+    breakoutPic: ``,
+    breakoutAlt: ``,
+    choice01: ``,
+    choice01Pic: ``,
+    choice01Alt: ``,
+    choice02: ``,
+    choice02Pic: ``,
+    choice02Alt: ``,
+    ending: ``,
+    endingPic: ``,
+    endingAlt: ``,
+    endingChoicePic: ``,
+    endingChoiceAlt: ``,
+    endingBreakout: ``,
+    endingBreakoutAlt: ``,
+    },
+
+    {story: ``,
+    storyPic: ``,
+    storyAlt: ``,
+    breakoutPic: ``,
+    breakoutAlt: ``,
+    choice01: ``,
+    choice01Pic: ``,
+    choice01Alt: ``,
+    choice02: ``,
+    choice02Pic: ``,
+    choice02Alt: ``,
+    ending: ``,
+    endingPic: ``,
+    endingAlt: ``,
+    endingChoicePic: ``,
+    endingChoiceAlt: ``,
+    endingBreakout: ``,
+    endingBreakoutAlt: ``,
+    },
+
+    {story: ``,
+    storyPic: ``,
+    storyAlt: ``,
+    breakoutPic: ``,
+    breakoutAlt: ``,
+    choice01: ``,
+    choice01Pic: ``,
+    choice01Alt: ``,
+    choice02: ``,
+    choice02Pic: ``,
+    choice02Alt: ``,
+    ending: ``,
+    endingPic: ``,
+    endingAlt: ``,
+    endingChoicePic: ``,
+    endingChoiceAlt: ``,
+    endingBreakout: ``,
+    endingBreakoutAlt: ``,
+    },
+
+    {story: ``,
+    storyPic: ``,
+    storyAlt: ``,
+    breakoutPic: ``,
+    breakoutAlt: ``,
+    choice01: ``,
+    choice01Pic: ``,
+    choice01Alt: ``,
+    choice02: ``,
+    choice02Pic: ``,
+    choice02Alt: ``,
+    ending: ``,
+    endingPic: ``,
+    endingAlt: ``,
+    endingChoicePic: ``,
+    endingChoiceAlt: ``,
+    endingBreakout: ``,
+    endingBreakoutAlt: ``,
+    },
+
+    {story: ``,
+    storyPic: ``,
+    storyAlt: ``,
+    breakoutPic: ``,
+    breakoutAlt: ``,
+    choice01: ``,
+    choice01Pic: ``,
+    choice01Alt: ``,
+    choice02: ``,
+    choice02Pic: ``,
+    choice02Alt: ``,
+    ending: ``,
+    endingPic: ``,
+    endingAlt: ``,
+    endingChoicePic: ``,
+    endingChoiceAlt: ``,
+    endingBreakout: ``,
+    endingBreakoutAlt: ``,
+    },
+
+];
+
+// namespace
+const storyApp = {};
+
+// get form values on submit and store them in variables with an event listener
+storyApp.getInfo = () => {
+    $('#userChoices').on('submit', function(e) {
+        // prevent page reloading
+        e.preventDefault();
+        // populate userInfo object with data from form
+        userInfo.name = $('#name').val();
+        userInfo.pet = $('#pet').val();
+        userInfo.veg = $('#veg').val();
+        userInfo.spice= $('#spice').val();
+        userInfo.fruit = $('#fruit').val();
+        userInfo.flower = $('#flower').val();
+        userInfo.fright = $("input[name='fright']:checked").val();
+        console.log(userInfo);
+        // append user name to header
+        $('.author').append(userInfo.name);
+        
+    
+        // story array
+        mainStory[0].story = `You leave work on a  beautiful day and find $50 lying on the street.`,
+        mainStory[0].storyPic = `./assets/street01.jpg`,
+        mainStory[0].storyAlt = `A person walking the middle of the street, jumping for joy by @dre0316 on Unsplash`,
+        mainStory[0].breakoutPic = `./assets/sun01.gif`,
+        mainStory[0].breakoutAlt = `an animated, handrawn sun`,
+        mainStory[0].choice01 = `Call a taxi to zip you home to play with your pet ${userInfo.pet}`,
+        mainStory[0].choice01Pic = `./assets/taxi.jpg`,
+        mainStory[0].choice01Alt = `A yellow taxi cab by @cioni_mattia on Unsplash`,
+        mainStory[0].choice02 = `Pocket the cash and enjoy the walk home`,
+        mainStory[0].choice02Pic = `./assets/cannTireCash.jpg`,
+        mainStory[0].choice02Alt = `Stacks of Canadian Tire money in a briefcase`,
+        mainStory[0].ending = `You get stuck in traffic for hours, using up your whole $50 and get home very late and very tired.`,
+        mainStory[0].endingPic = `./assets/traffic.jpg`,
+        mainStory[0].endingAlt = `Traffic jam on a foggy night by @dylu at Unsplash`,
+        mainStory[0].endingChoicePic = `./assets/sadWalk.gif`,
+        mainStory[0].endingChoiceAlt = `A man walking dejectedly with his head down`,
+        mainStory[0].endingBreakout = `./assets/rainCloud.gif`,
+        mainStory[0].endingBreakoutAlt = `Animated rain cloud`,
+        mainStory[1].story = `The day gets hotter as you pass by a bespoke frozen treat pop up shoppe, so you decide to treat yo'self. Do you choose:`,
+        mainStory[1].storyPic = `./assets/gelatoShoppe.jpg`,
+        mainStory[1].storyAlt = `Sign on the window of an artisan, handmade, gluten free & vegan gelato & sorbetto shop by @bubo at Unsplash`,
+        mainStory[1].breakoutPic = `./assets/sweet.gif`,
+        mainStory[1].breakoutAlt = `Animated letters spelling "sweet"`,
+        mainStory[1].choice01 = `A hand-churned ${userInfo.veg} ${userInfo.spice} gelato`,
+        mainStory[1].choice01Pic = `./assets/bigIcecream.jpg`,
+        mainStory[1].choice01Alt = `A large flower-shaped icecream scoop on a cone by  at Unsplash`,
+        mainStory[1].choice02 = `An organic, vegan ${userInfo.fruit} ${userInfo.flower} popsicle`,
+        mainStory[1].choice02Pic = `./assets/bluePop.jpg`,
+        mainStory[1].choice02Alt = `A blue, handmade popsicle with berries and flower petals by  at Unsplash`,
+        mainStory[1].ending = `Your treat melts in the heat before you even finish half! You walk home to your pet ${userInfo.pet} sad and sweaty.`,
+        mainStory[1].endingPic = `./assets/melted.jpg`,
+        mainStory[1].endingAlt = `Icecream dropped and melted on the sidewalk by @pawelj at Unsplash`,
+        mainStory[1].endingChoicePic = `./assets/sadWalk.gif`,
+        mainStory[1].endingChoiceAlt = `A man walking dejectedly with his head down`,
+        mainStory[1].endingBreakout = `./assets/oops.gif`,
+        mainStory[1].endingBreakoutAlt = `Animated letters spelling "oops"`,
+        mainStory[2].story = `It's really getting hot out, the sweat is starting to drip off of you.`,
+        mainStory[2].storyPic = `./assets/sweaty.jpg`,
+        mainStory[2].storyAlt = `A person swaeting through the back of their shirt`,
+        mainStory[2].breakoutPic = `./assets/heat.gif`,
+        mainStory[2].breakoutAlt = `Animated letters spelling "hot"`,
+        mainStory[2].choice01 = `I love the heat, bring it on!`,
+        mainStory[2].choice01Pic = `./assets/hotHotHeat.jpg`,
+        mainStory[2].choice01Alt = `A man fanning himself in the heat, sitting atop a pedicar by @shandranick at Unsplash`,
+        mainStory[2].choice02 = `Switch to the shady side of the street`,
+        mainStory[2].choice02Pic = `./assets/kangaShade.jpg`,
+        mainStory[2].choice02Alt = `A kangaroo lounging in the shade by @amati913 at Unsplash`,
+        mainStory[2].ending = `Your treat melts in the heat before you even finish half! You walk home to your pet ${userInfo.pet} sad and sweaty.`,
+        mainStory[2].endingPic = `./assets/melt.jpg`,
+        mainStory[2].endingAlt = `Melted green popsicle by @uniqueton at Unsplash`,
+        mainStory[2].endingChoicePic = `./assets/sadWalk.gif`,
+        mainStory[2].endingChoiceAlt = `A man walking dejectedly with his head down`,
+        mainStory[2].endingBreakout = `./assets/oops.gif`,
+        mainStory[2].endingBreakoutAlt = `Animated letters spelling "oops"`,
+        mainStory[3].story = `You enjoy your stroll until a crack of thunder rings out and rains pours down. There are only two places in sight to seek shelter from the raging storm:`,
+        mainStory[3].storyPic = `./assets/storm.jpg`,
+        mainStory[3].storyAlt = `Lighning striking a road in the middle of a field by @noaa at Unsplash`,
+        mainStory[3].breakoutPic = `./assets/boom02.gif`,
+        mainStory[3].breakoutAlt = `Animated letters spelling "boom" in a storm cloud`,
+        mainStory[3].choice01 = `Wait it out on the spooky porch`,
+        mainStory[3].choice01Pic = `./assets/house.jpg`,
+        mainStory[3].choice01Alt = `Abandoned, dilapidated house in Kamloops, BC by @yann_allegre at Unsplash`,
+        mainStory[3].choice02 = `Take your chances under the lonely tree`,
+        mainStory[3].choice02Pic = `./assets/tree.jpg`,
+        mainStory[3].choice02Alt = `Gnarled Japanese maple tree with red fall leaves by @fcornish at Unsplash`,
+        mainStory[4].story = `The rain gets even worse and you're soaked to the bone!`,
+        mainStory[4].storyPic = `./assets/wet.jpg`,
+        mainStory[4].storyAlt = `A soaking wet robin on a fence in the rain by @jcotten at Unsplash`,
+        mainStory[4].breakoutPic = `./assets/rainCloud.gif`,
+        mainStory[4].breakoutAlt = `an animated rain cloud`,
+        mainStory[4].choice01 = `Stick it out`,
+        mainStory[4].choice01Pic = `./assets/stubbornRain.jpg`,
+        mainStory[4].choice01Alt = `A woman waiting in the rain`,
+        mainStory[4].choice02 = `Run for it!`,
+        mainStory[4].choice02Pic = `./assets/run.jpg`,
+        mainStory[4].choice02Alt = `A person running away down a dark, wet street by @we_are_rising at Unsplash`,
+        mainStory[4].ending = `The rain turns the street into a river, sweeping you downstream. You catch pneumonia and miss weeks of work.`,
+        mainStory[4].endingPic = `./assets/flood.jpg`,
+        mainStory[4].endingAlt = `Flood waters as deep as car roofs, flowing through a parking lot by @chriswebdog at Unsplash`,
+        mainStory[4].endingChoicePic = `./assets/sick.gif`,
+        mainStory[4].endingChoiceAlt = `A man lying in bed, sick`,
+        mainStory[4].endingBreakout = `./assets/fail.gif`,
+        mainStory[4].endingBreakoutAlt = `Animated letters spelling fail`,
+        mainStory[5].story = `As you take shelter on the porch, you see hordes of ${userInfo.fright} surrounding you, also trying to stay dry.`,
+        mainStory[5].storyPic = `./assets/porch.jpg`,
+        mainStory[5].storyAlt = `An old wooden rocking chair on a porch`,
+        mainStory[5].breakoutPic = `./assets/boo.gif`,
+        mainStory[5].breakoutAlt = `animated letters spelling the word "boo"`,
+        mainStory[5].choice01 = `Try the doorbell`,
+        mainStory[5].choice01Pic = `./assets/doorbell.jpg`,
+        mainStory[5].choice01Alt = `Rusty, antique doorbell on an old, peeling wall by @__matthoffman__ at Unsplash`,
+        mainStory[5].choice02 = `That's it, I'm out of here!`,
+        mainStory[5].choice02Pic = `./assets/scared02.jpg`,
+        mainStory[5].choice02Alt = `Scared child with hands covering face by @caleb_woods at Unsplash`,
+        mainStory[5].ending = `A sweet elderly lady welcomes you into her house for ${userInfo.fruit} cake and tea. While you dry off and wait out the storm, you both enjoy a Murder She Wrote marathon.`,
+        mainStory[5].endingPic = `./assets/grandma.jpg`,
+        mainStory[5].endingAlt = `Elderly lady smiling and eating cake`,
+        mainStory[5].endingChoicePic = `./assets/murder.gif`,
+        mainStory[5].endingChoiceAlt = `Elderly lady eating popcorn`,
+        mainStory[5].endingBreakout = `./assets/yay.gif`,
+        mainStory[5].endingBreakoutAlt = `animated letters spelling the word "yay"`,
+        mainStory[6].story = `Way too many ${userInfo.fright} come up from the sewer grate, surrounding you.`,
+        mainStory[6].storyPic = `./assets/sewerDrain.jpg`,
+        mainStory[6].storyAlt = `Person standing on top of sewer grate by Barik5ive at pexels.com`,
+        mainStory[6].breakoutPic = ``,
+        mainStory[6].breakoutAlt = ``,
+        mainStory[6].choice01 = `Escape to the house`,
+        mainStory[6].choice01Pic = `./assets/house.jpg`,
+        mainStory[6].choice01Alt = `Abandoned, dilapidated house in Kamloops, BC by @yann_allegre at Unsplash`,
+        mainStory[6].choice02 = `Nope right out of there`,
+        mainStory[6].choice02Pic = `./assets/scared03.jpg`,
+        mainStory[6].choice02Alt = `person covering face with hands by Ian Panelo at pexels.com`,
+        mainStory[6].ending = ``,
+        mainStory[6].endingPic = ``,
+        mainStory[6].endingAlt = ``,
+        mainStory[6].endingChoicePic = ``,
+        mainStory[6].endingChoiceAlt = ``,
+        mainStory[6].endingBreakout = ``,
+        mainStory[6].endingBreakoutAlt = ``,
+    console.log(mainStory);
+    // return mainStory; 
+    });
+};
+
+// updated HTML to pass into DOM when a story choice is made
+storyApp.populator = (arrayIndex) => {
+    const fill = `
+        <div class="container">
+            <div class="mainGraphic">
+                <img src="${mainStory[arrayIndex].storyPic}" alt="${mainStory[arrayIndex].storyAlt}" class="mainImage">
+                <img src="${mainStory[arrayIndex].breakoutPic}" alt="${mainStory[arrayIndex].breakoutAlt}" class="breakout">
+                <div class="story">
+                    <p class="storyText">${mainStory[arrayIndex].story}</p>
+                </div>
+            </div>
+            <div class="navigation">
+                <img class="navImg navImgOne" src="${mainStory[arrayIndex].choice01Pic}" alt="${mainStory[arrayIndex].choice01Alt}">
+                <p class="choice choiceOne">${mainStory[arrayIndex].choice01}</p>
+                <img class="navImg navImgTwo" src="${mainStory[arrayIndex].choice02Pic}" alt="${mainStory[arrayIndex].choice02Alt}">
+                <p class="choice choiceTwo">${mainStory[arrayIndex].choice02}</p>
+            </div>
+        </div>
+    `;
+    return fill;
+};
+
+storyApp.endingPopulator = (arrayIndex) => {
+    const fill = `
+        <div class="container">
+            <div class="mainGraphic">
+                <img src="${mainStory[arrayIndex].endingPic}" alt="${mainStory[arrayIndex].endingAlt}" class="mainImage">
+                <img src="${mainStory[arrayIndex].endingBreakout}" alt="${mainStory[arrayIndex].endingBreakoutAlt}" class="breakout breakoutEnd">
+                <div class="story">
+                    <p class="storyText">${mainStory[arrayIndex].ending}</p>
+                </div>
+            </div>
+            <div class="navigation">
+                <img class="navImgEnd" src="${mainStory[arrayIndex].endingChoicePic}" alt="${mainStory[arrayIndex].endingChoiceAlt}">
+                <p class="choice restart" onClick="window.location.reload()">Start Over</p>
+                <p class=""></p>
+            </div>
+        </div>
+    `;
+    return fill;
+};
+
+storyApp.read = () => {
+    // continue the story with an event listener
+
+    $('.navigation').on('click', function() {
+        $('#story').html(storyApp.populator(0));
+        $('.choiceOne').addClass('choiceOne0');
+        $('.choiceTwo').addClass('choiceTwo0');
+        $('.breakout').addClass('breakout0');
+        // first endpoint
+        $('.choiceOne0').on('click', function() {
+            $('#story').html(storyApp.endingPopulator(0));
+        });
+        // first branch
+        $('.choiceTwo0').on('click', function() {
+            $('#story').html(storyApp.populator(1));
+            $('.choiceOne').addClass('choiceOne1');
+            $('.choiceTwo').addClass('choiceTwo1');
+            $('.breakout').addClass('breakout1');
+            // second branch
+            $('.choiceOne1',).on('click', function() {
+                console.log('click 3');
+                $('#story').html(storyApp.populator(2));
+                $('.choiceOne').addClass('choiceOne2');
+                $('.choiceTwo').addClass('choiceTwo2');
+                $('.breakout').addClass('breakout2');
+                // second endpoint
+                $('.choiceOne2').on('click', function() {
+                    $('#story').html(storyApp.endingPopulator(1));
+                });
+                // third branch
+                $('.choiceTwo2',).on('click', function() {
+                    console.log('click 4');
+                    $('#story').html(storyApp.populator(3));
+                    $('.choiceOne').addClass('choiceOne3');
+                    $('.choiceTwo').addClass('choiceTwo3');
+                    $('.breakout').addClass('breakout3');
+                    // fourth branch
+                    $('.choiceOne3',).on('click', function() {
+                        console.log('click 5');
+                        $('#story').html(storyApp.populator(5));
+                        $('.choiceOne').addClass('choiceOne5');
+                        $('.choiceTwo').addClass('choiceTwo5');
+                        $('.breakout').addClass('breakout5');
+                        // third endpoint
+                        $('.choiceOne5').on('click', function() {
+                            $('#story').html(storyApp.endingPopulator(5));
+                        });
+                        // fourth endpoint
+                        $('.choiceTwo5').on('click', function() {
+                            $('#story').html(storyApp.endingPopulator(4));
+                        });
+                    });
+                    $('.choiceTwo3',).on('click', function() {
+                        console.log('click 5');
+                        $('#story').html(storyApp.populator(4));
+                        $('.choiceOne').addClass('choiceOne4');
+                        $('.choiceTwo').addClass('choiceTwo4');
+                        $('.breakout').addClass('breakout4');
+                        // fourth endpoint
+                        $('.choiceTwo4').on('click', function() {
+                            $('#story').html(storyApp.endingPopulator(4));
+                        });
+                        // fifth branch
+                        $('.choiceOne4',).on('click', function() {
+                            console.log('click 5');
+                            $('#story').html(storyApp.populator(6));
+                            $('.choiceOne').addClass('choiceOne6');
+                            $('.choiceTwo').addClass('choiceTwo6');
+                            $('.breakout').addClass('breakout6');
+                            // third endpoint
+                            $('.choiceOne6').on('click', function() {
+                                $('#story').html(storyApp.endingPopulator(5));
+                            });
+                            // fourth endpoint
+                            $('.choiceTwo6').on('click', function() {
+                                $('#story').html(storyApp.endingPopulator(4));
+                            });
+                        });
+                    });
+                });
+
+                
+            });
+
+            $('.choiceTwo1',).on('click', function() {
+                console.log('click 3');
+                $('#story').html(storyApp.populator(2));
+                userInfo.treat = 'gelato';
+                $('.choiceOne').addClass('choiceOne2');
+                $('.choiceTwo').addClass('choiceTwo2');
+                $('.breakout').addClass('breakout2');
+                // second endpoint
+                $('.choiceOne2').on('click', function() {
+                    $('#story').html(storyApp.endingPopulator(2));
+                });
+                // third branch
+                $('.choiceTwo2',).on('click', function() {
+                    console.log('click 4');
+                    $('#story').html(storyApp.populator(3));
+                    $('.choiceOne').addClass('choiceOne3');
+                    $('.choiceTwo').addClass('choiceTwo3');
+                    $('.breakout').addClass('breakout3');
+                    // fourth branch
+                    $('.choiceOne3',).on('click', function() {
+                        console.log('click 5');
+                        $('#story').html(storyApp.populator(5));
+                        $('.choiceOne').addClass('choiceOne5');
+                        $('.choiceTwo').addClass('choiceTwo5');
+                        $('.breakout').addClass('breakout5');
+                        // third endpoint
+                        $('.choiceOne5').on('click', function() {
+                            $('#story').html(storyApp.endingPopulator(5));
+                        });
+                        // fourth endpoint
+                        $('.choiceTwo5').on('click', function() {
+                            $('#story').html(storyApp.endingPopulator(4));
+                        });
+                    });
+                    $('.choiceTwo3',).on('click', function() {
+                        console.log('click 5');
+                        $('#story').html(storyApp.populator(4));
+                        $('.choiceOne').addClass('choiceOne4');
+                        $('.choiceTwo').addClass('choiceTwo4');
+                        $('.breakout').addClass('breakout4');
+                        // fourth endpoint
+                        $('.choiceTwo4').on('click', function() {
+                            $('#story').html(storyApp.endingPopulator(4));
+                        });
+                        // fifth branch
+                        $('.choiceOne4',).on('click', function() {
+                            console.log('click 5');
+                            $('#story').html(storyApp.populator(6));
+                            $('.choiceOne').addClass('choiceOne6');
+                            $('.choiceTwo').addClass('choiceTwo6');
+                            $('.breakout').addClass('breakout6');
+                            // third endpoint
+                            $('.choiceOne6').on('click', function() {
+                                $('#story').html(storyApp.endingPopulator(5));
+                            });
+                            // fourth endpoint
+                            $('.choiceTwo6').on('click', function() {
+                                $('#story').html(storyApp.endingPopulator(4));
+                            });
+                        });
+                    });
+                });
+            });
+        });
+        
+    });
+
+    
 
 
 
-// const userInfo = {
-//     name: ,
-//     pet: ,
-//     veg: ,
-//     spice: ,
-//     fruit: ,
-//     flower: ,
-//     treat: ,
-//     fright: ,
-// }
+};
+
+storyApp.init = () => {
+    $('#userChoices').on('submit', function() {
+        // remove form and show story section
+        $('#form').toggleClass('formSectionOff');
+        $('#story').toggleClass('storyContainerOn');
+        
+    });
+    storyApp.getInfo();
+    storyApp.read();
+};
+
+
+$(function() {
+    console.log('ready');
+    
+    storyApp.init();
+    
+});

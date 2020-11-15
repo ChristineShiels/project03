@@ -1,4 +1,12 @@
-// image
+// main content
+.storyContainerOff {
+    display: none;
+}
+
+.storyContainerOn {
+    display: inherit;
+}
+
 .mainGraphic {
     @include outsideBorder;
     border-radius: 150px 150px 0 0;
@@ -12,12 +20,36 @@
     border-radius: 130px 130px 0 0;
 }
 
-.breakout {
+.breakout, .breakout0 {
     width: 250px;
     position: absolute;
     top: 11%;
     right: 62%;
     transform: rotate(-25deg);
+}
+
+.breakout0 {
+    width: 400px;
+    right: 55%;
+}
+
+.breakout1 {
+    width: 400px;
+    top: 24%;
+    transform: rotate(25deg);
+    left: 65%;
+}
+
+.breakout3 {
+    top: 24%;
+    width: 400px;
+    transform: none;
+}
+
+.breakoutEnd {
+    width: 400px;
+    right: 55%;
+    // top: 15%;
 }
 
 .story {
@@ -39,37 +71,37 @@
 }
 
 .navImg {
-    max-width: 50%;
     @include insideBorder;
-    border-top: none;
-    position: cover;
-    // overflow: hidden;
-    
+    border-top: none;    
+    max-width: 50%;
 }
 
-.navImg01 {
+.navImg:first-of-type {
     border-right: 10px solid $secondary;
 }
 
-.navImg02 {
+.navImg:last-of-type {
     border-left: 10px solid $secondary;
+}
+
+.navImgEnd {
+    width: 100%;
+    @include insideBorder;
+    border-top: none;
 }
 
 .choice {
     position: absolute;
     transform: translate(-50%, 0);
-    max-width: 30%;
+    width: 46%;
 }
 
-.choice01 {
-    left: 25%;
+.choice:first-of-type {
+    left: 25.45%;
 }
 
-.choice02 {
-    left: 75%;
+.choice:last-of-type {
+    left: 74.75%;
 }
 
 
-fieldset {
-    display: none;
-}

@@ -172,7 +172,6 @@ storyApp.getInfo = () => {
         console.log(userInfo);
         // append user name to header
         $('.author').append(userInfo.name);
-        
     
         // story array
         mainStory[0].story = `You leave work on a  beautiful day and find $50 lying on the street.`,
@@ -229,18 +228,18 @@ storyApp.getInfo = () => {
         mainStory[2].endingChoiceAlt = `A man walking dejectedly with his head down`,
         mainStory[2].endingBreakout = `./assets/oops.gif`,
         mainStory[2].endingBreakoutAlt = `Animated letters spelling "oops"`,
-        mainStory[3].story = `You enjoy your stroll until a crack of thunder rings out and rains pours down. There are only two places in sight to seek shelter from the raging storm:`,
+        mainStory[3].story = `You enjoy your stroll until a crack of thunder rings out and the rain pours down. There are only two places in sight to seek shelter from the raging storm:`,
         mainStory[3].storyPic = `./assets/storm.jpg`,
         mainStory[3].storyAlt = `Lighning striking a road in the middle of a field by @noaa at Unsplash`,
         mainStory[3].breakoutPic = `./assets/boom02.gif`,
         mainStory[3].breakoutAlt = `Animated letters spelling "boom" in a storm cloud`,
-        mainStory[3].choice01 = `Wait it out on the spooky porch`,
+        mainStory[3].choice01 = `Wait it out on the porch of the spooky house`,
         mainStory[3].choice01Pic = `./assets/house.jpg`,
         mainStory[3].choice01Alt = `Abandoned, dilapidated house in Kamloops, BC by @yann_allegre at Unsplash`,
         mainStory[3].choice02 = `Take your chances under the lonely tree`,
         mainStory[3].choice02Pic = `./assets/tree.jpg`,
         mainStory[3].choice02Alt = `Gnarled Japanese maple tree with red fall leaves by @fcornish at Unsplash`,
-        mainStory[4].story = `The rain gets even worse and you're soaked to the bone!`,
+        mainStory[4].story = `The rain gets even worse and now you're soaked to the bone!`,
         mainStory[4].storyPic = `./assets/wet.jpg`,
         mainStory[4].storyAlt = `A soaking wet robin on a fence in the rain by @jcotten at Unsplash`,
         mainStory[4].breakoutPic = `./assets/rainCloud.gif`,
@@ -258,7 +257,7 @@ storyApp.getInfo = () => {
         mainStory[4].endingChoiceAlt = `A man lying in bed, sick`,
         mainStory[4].endingBreakout = `./assets/fail.gif`,
         mainStory[4].endingBreakoutAlt = `Animated letters spelling fail`,
-        mainStory[5].story = `As you take shelter on the porch, you see hordes of ${userInfo.fright} surrounding you, also trying to stay dry.`,
+        mainStory[5].story = `As you take shelter on the porch, hordes of ${userInfo.fright} surround you, escaping the rain.`,
         mainStory[5].storyPic = `./assets/porch.jpg`,
         mainStory[5].storyAlt = `An old wooden rocking chair on a porch`,
         mainStory[5].breakoutPic = `./assets/boo.gif`,
@@ -276,7 +275,7 @@ storyApp.getInfo = () => {
         mainStory[5].endingChoiceAlt = `Elderly lady eating popcorn`,
         mainStory[5].endingBreakout = `./assets/yay.gif`,
         mainStory[5].endingBreakoutAlt = `animated letters spelling the word "yay"`,
-        mainStory[6].story = `Way too many ${userInfo.fright} come up from the sewer grate, surrounding you.`,
+        mainStory[6].story = `A stream of ${userInfo.fright} come up from the sewer grate, surrounding you.`,
         mainStory[6].storyPic = `./assets/sewerDrain.jpg`,
         mainStory[6].storyAlt = `Person standing on top of sewer grate by Barik5ive at pexels.com`,
         mainStory[6].breakoutPic = ``,
@@ -296,6 +295,7 @@ storyApp.getInfo = () => {
         mainStory[6].endingBreakoutAlt = ``,
     console.log(mainStory);
     // return mainStory; 
+    
     });
 };
 
@@ -341,9 +341,15 @@ storyApp.endingPopulator = (arrayIndex) => {
     return fill;
 };
 
-storyApp.read = () => {
-    // continue the story with an event listener
+// html for cockroach user choice
+const roachesHtml = `<img src="./assets/roaches.gif" alt="Silhouetted roaches crawling up the screen" class="breakout breakoutRoach">`;
 
+// html for clowns user choice
+const clownsHtml = `<img src="./assets/clown.gif" alt="A creepy clown holding a red balloon and smiling" class="breakout breakoutClown1"><img src="./assets/clown.gif" alt="A creepy clown holding a red balloon and smiling" class="breakout breakoutClown2"><img src="./assets/clown.gif" alt="A creepy clown holding a red balloon and smiling" class="breakout breakoutClown3"><img src="./assets/clown.gif" alt="A creepy clown holding a red balloon and smiling" class="breakout breakoutClown4"><img src="./assets/clown.gif" alt="A creepy clown holding a red balloon and smiling" class="breakout breakoutClown5">`;
+
+
+storyApp.read = () => {
+    // progress through the story with an event listener
     $('.navigation').on('click', function() {
         $('#story').html(storyApp.populator(0));
         $('.choiceOne').addClass('choiceOne0');
@@ -384,13 +390,23 @@ storyApp.read = () => {
                         $('.choiceOne').addClass('choiceOne5');
                         $('.choiceTwo').addClass('choiceTwo5');
                         $('.breakout').addClass('breakout5');
+                        // show clowns or cockroaches based on user choice
+                        if (userInfo.fright === 'cockroaches') {
+                            $('img.breakout').remove();
+                            $('div.mainGraphic').append(roachesHtml);    
+                        } else {
+                            $('img.breakout').remove();
+                            $('div.mainGraphic').append(clownsHtml);
+                        };
                         // third endpoint
                         $('.choiceOne5').on('click', function() {
                             $('#story').html(storyApp.endingPopulator(5));
+                            $('.breakoutEnd').addClass('breakoutEnd2');
                         });
                         // fourth endpoint
                         $('.choiceTwo5').on('click', function() {
                             $('#story').html(storyApp.endingPopulator(4));
+                            $('.breakoutEnd').addClass('breakoutEnd2');
                         });
                     });
                     $('.choiceTwo3',).on('click', function() {
@@ -402,6 +418,7 @@ storyApp.read = () => {
                         // fourth endpoint
                         $('.choiceTwo4').on('click', function() {
                             $('#story').html(storyApp.endingPopulator(4));
+                            $('.breakoutEnd').addClass('breakoutEnd2');
                         });
                         // fifth branch
                         $('.choiceOne4',).on('click', function() {
@@ -410,19 +427,27 @@ storyApp.read = () => {
                             $('.choiceOne').addClass('choiceOne6');
                             $('.choiceTwo').addClass('choiceTwo6');
                             $('.breakout').addClass('breakout6');
+                            // show clowns or cockroaches based on user choice
+                            if (userInfo.fright === 'cockroaches') {
+                                $('img.breakout').remove();
+                                $('div.mainGraphic').append(roachesHtml);    
+                            } else {
+                                $('img.breakout').remove();
+                                $('div.mainGraphic').append(clownsHtml);
+                            };
                             // third endpoint
                             $('.choiceOne6').on('click', function() {
                                 $('#story').html(storyApp.endingPopulator(5));
+                                $('.breakoutEnd').addClass('breakoutEnd2');
                             });
                             // fourth endpoint
                             $('.choiceTwo6').on('click', function() {
                                 $('#story').html(storyApp.endingPopulator(4));
+                                $('.breakoutEnd').addClass('breakoutEnd2');
                             });
                         });
                     });
-                });
-
-                
+                });    
             });
 
             $('.choiceTwo1',).on('click', function() {
@@ -450,6 +475,14 @@ storyApp.read = () => {
                         $('.choiceOne').addClass('choiceOne5');
                         $('.choiceTwo').addClass('choiceTwo5');
                         $('.breakout').addClass('breakout5');
+                        // show clowns or cockroaches based on user choice
+                        if (userInfo.fright === 'cockroaches') {
+                            $('img.breakout').remove();
+                            $('div.mainGraphic').append(roachesHtml);    
+                        } else {
+                            $('img.breakout').remove();
+                            $('div.mainGraphic').append(clownsHtml);
+                        };
                         // third endpoint
                         $('.choiceOne5').on('click', function() {
                             $('#story').html(storyApp.endingPopulator(5));
@@ -457,6 +490,7 @@ storyApp.read = () => {
                         // fourth endpoint
                         $('.choiceTwo5').on('click', function() {
                             $('#story').html(storyApp.endingPopulator(4));
+                            $('.breakoutEnd').addClass('breakoutEnd2');
                         });
                     });
                     $('.choiceTwo3',).on('click', function() {
@@ -468,6 +502,7 @@ storyApp.read = () => {
                         // fourth endpoint
                         $('.choiceTwo4').on('click', function() {
                             $('#story').html(storyApp.endingPopulator(4));
+                            $('.breakoutEnd').addClass('breakoutEnd2');
                         });
                         // fifth branch
                         $('.choiceOne4',).on('click', function() {
@@ -475,27 +510,30 @@ storyApp.read = () => {
                             $('#story').html(storyApp.populator(6));
                             $('.choiceOne').addClass('choiceOne6');
                             $('.choiceTwo').addClass('choiceTwo6');
-                            $('.breakout').addClass('breakout6');
+                            // show clowns or cockroaches based on user choice
+                            if (userInfo.fright === 'cockroaches') {
+                                $('img.breakout').remove();
+                                $('div.mainGraphic').append(roachesHtml);    
+                            } else {
+                                $('img.breakout').remove();
+                                $('div.mainGraphic').append(clownsHtml);
+                            };
                             // third endpoint
                             $('.choiceOne6').on('click', function() {
                                 $('#story').html(storyApp.endingPopulator(5));
+                                $('.breakoutEnd').addClass('breakoutEnd2');
                             });
                             // fourth endpoint
                             $('.choiceTwo6').on('click', function() {
                                 $('#story').html(storyApp.endingPopulator(4));
+                                $('.breakoutEnd').addClass('breakoutEnd2');
                             });
                         });
                     });
                 });
             });
         });
-        
     });
-
-    
-
-
-
 };
 
 storyApp.init = () => {
@@ -503,7 +541,6 @@ storyApp.init = () => {
         // remove form and show story section
         $('#form').toggleClass('formSectionOff');
         $('#story').toggleClass('storyContainerOn');
-        
     });
     storyApp.getInfo();
     storyApp.read();
@@ -514,5 +551,9 @@ $(function() {
     console.log('ready');
     
     storyApp.init();
+
+
+    
+    
     
 });

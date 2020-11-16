@@ -473,7 +473,7 @@ input[type="submit"]:active {
   border-radius: 130px 130px 0 0;
 }
 
-.breakout, .breakout0 {
+.breakout {
   width: 250px;
   position: absolute;
   top: 11%;
@@ -489,10 +489,10 @@ input[type="submit"]:active {
 
 .breakout1 {
   width: 400px;
-  top: 24%;
-  -webkit-transform: rotate(25deg);
-          transform: rotate(25deg);
-  left: 65%;
+  top: 26%;
+  -webkit-transform: rotate(20deg);
+          transform: rotate(20deg);
+  left: 62%;
 }
 
 .breakout3 {
@@ -502,9 +502,70 @@ input[type="submit"]:active {
           transform: none;
 }
 
+.breakout4 {
+  width: 400px;
+  top: 8%;
+  left: 55%;
+  -webkit-transform: rotate(25deg);
+          transform: rotate(25deg);
+}
+
+.breakoutRoach {
+  width: 420px;
+  -webkit-transform: none;
+          transform: none;
+  top: 21%;
+  right: 54%;
+}
+
+.breakoutClown1 {
+  -webkit-transform: none;
+          transform: none;
+  top: 15%;
+}
+
+.breakoutClown2 {
+  -webkit-transform: none;
+          transform: none;
+  top: 18%;
+  left: 62%;
+}
+
+.breakoutClown3 {
+  width: 350px;
+  -webkit-transform: none;
+          transform: none;
+  top: 28%;
+  right: 42%;
+}
+
+.breakoutClown4 {
+  width: 450px;
+  -webkit-transform: none;
+          transform: none;
+  top: 35%;
+  left: 60%;
+}
+
+.breakoutClown5 {
+  width: 550px;
+  -webkit-transform: none;
+          transform: none;
+  top: 32%;
+  right: 58%;
+}
+
 .breakoutEnd {
   width: 400px;
   right: 55%;
+}
+
+.breakoutEnd2 {
+  width: 300px;
+  left: 60%;
+  top: 20%;
+  -webkit-transform: rotate(20deg);
+          transform: rotate(20deg);
 }
 
 .story {

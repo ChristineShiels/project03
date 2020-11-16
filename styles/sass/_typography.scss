@@ -1,7 +1,4 @@
-//     font-family: 'Amarante', cursive;
-
-// font-family: 'Montserrat', sans-serif;
-
+// styling typography
 body {
     color: $black;
     font-family: 'Montserrat', sans-serif;
@@ -34,8 +31,30 @@ h3, input[type="submit"] {
 .choice {
     color: $white;
     @include redHighlight;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: none;
+    font-weight: 700;
 }
 
 input {
     font-family: 'Amarante', cursive;
+}
+
+// responsive design
+@media (max-width: 633px) {
+    button {
+        font-size: 1.6rem;	
+    }
+
+}
+
+@media (max-width: 510px) {
+    body {
+        font-size: 1.6rem;
+    };
+
+    input[type="submit"] {
+        font-size: 2rem;	
+    }
+
 }

@@ -1,4 +1,5 @@
 // form 
+// toggle form off after submit
 .formSectionOn {
     display: inherit;
     @include outsideBorder;
@@ -10,8 +11,8 @@
     display: none;
 }
 
+// form styling
 div.userInput {
-    // display: none;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -32,17 +33,14 @@ div.inputContainer {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    
     text-align: left;
-    
     width: 48%;
-    
 }
 
 div.inputContainer:hover, div.inputContainer:focus {
     color: $tertiary;
-   
 }
+
 .inputContainer input {
     border: 2px solid $black;
     border-radius: 50px;
@@ -89,5 +87,29 @@ input[type="submit"]:active {
     border-color: $tertiary;
     background-color: $white;
     color: $tertiary;
+}
+
+// Responsive design 
+@media (max-width: 610px) {
+    .formSectionOn {
+        border-radius: 80px 80px 0 0;
+    }
+   
+    div.userInput {
+        border-radius: 60px 60px 0 0;
+    }
+}
+
+@media (max-width: 550px) {
+    div.rowContainer {
+        flex-direction: column;
+        min-width: 100%;
+        align-items: center;
+    }
+    
+    div.inputContainer {
+        align-items: center;
+        width: 100%;
+    }
 }
 

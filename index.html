@@ -5,14 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>jQuery Adventure!</title>
+    <!-- link css stylesheet -->
     <link rel="stylesheet" href="./styles/style.css">
+    <!-- link google fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
         href="https://fonts.googleapis.com/css2?family=Amarante&family=Montserrat:wght@400;500;600;700;800&display=swap"
         rel="stylesheet">
 </head>
-
 <body>
+    <!-- header and title -->
     <header class="cover">
         <div class="wrapper container">
             <h3>Choose Your Own Adventure</h1>
@@ -21,11 +23,11 @@
                 <h1>jQuery Adventure
             </h3>
             <hr>
+            <!-- will be dynamically updated -->
             <h2 class="author">By C. Shiels & </h2>
-
-
     </header>
     <main class="wrapper container">
+        <!-- form for collecting user input -->
         <section class="formSectionOn" id="form">
             <div class="userInput">
                 <form action="" class="userChoices" id="userChoices">
@@ -59,7 +61,6 @@
                             <input type="text" id="flower" name="flower" form="userChoices" maxlength="30" placeholder="Flower" required>
                         </div>
                     </div>
-
                     <h2 class="radio">Which is scarier?</h2>
                     <div class="radioInput">
                         <input type="radio" id="cockroach" name="fright" value="cockroaches" form="userChoices">
@@ -69,39 +70,33 @@
                         <input type="radio" id="clowns" name="fright" value="clowns" form="userChoices">
                         <label for="clowns">Clowns</label>
                     </div>
-                    
-
                     <input type="submit" form="userChoices" value="Let's Start Your Story!"></input>
                 </form>
-
             </div>
         </section>
-
+        <!-- story pages -->
         <section class="storyContainerOff container" id="story">
+            <!-- will be dynamically updated -->
             <div class="container">
                 <div class="mainGraphic">
                     <img src="./assets/jquery.jpg" alt="" class="mainImage">
                     <img src="./assets/cash.gif" alt="" class="breakout">
+                    <!-- story text -->
                     <div class="story">
                         <p class="storyText">Welcome to your adventure! Click any button below to begin:</p>
                     </div>
                 </div>
-    
+                <!-- navigation buttons and images for story choices -->
                 <div class="navigation">
                     <img class="navImg navImgOne" src="./assets/keyboard.jpg" alt="">
-                    <p class="choice choiceOne">Click Here If A Hotdog Is A Sandwich</p>
+                    <button class="choice choiceOne">Click Here If A Hotdog Is A Sandwich</button>
                     <img class="navImg navImgTwo" src="./assets/code01.jpg" alt="">
-                    <p class="choice choiceTwo">Otherwise, Click Here</p>
-    
+                    <button class="choice choiceTwo">Otherwise, Click Here</button>
                 </div>
             </div>
-            
         </section>
-
     </main>
-
-
-    
+    <!-- link jQuery and .js file -->
     <script src='https://code.jquery.com/jquery-3.4.0.min.js'
         integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
     <script src="./script.js"></script>

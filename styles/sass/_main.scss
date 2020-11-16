@@ -1,4 +1,5 @@
 // main content
+// toggling the story pages off during form input
 .storyContainerOff {
     display: none;
 }
@@ -7,19 +8,20 @@
     display: inherit;
 }
 
+// Main page styling
 .mainGraphic {
     @include outsideBorder;
     border-radius: 150px 150px 0 0;
 }
 
 .mainImage {
-    // max-height: 55vh;
     @include insideBorder;
     border-bottom: none;
     box-shadow: -5px -5px $secondary, 5px -5px $secondary,;
     border-radius: 130px 130px 0 0;
 }
 
+// this image "breaks out" of the image borders, following the design of the classic book covers
 .breakout {
     width: 250px;
     position: absolute;
@@ -27,7 +29,7 @@
     right: 62%;
     transform: rotate(-25deg);
 }
-
+// as each breakout image as a different shape/dimensions, they are each styled independently
 .breakout0 {
     width: 400px;
     right: 55%;
@@ -35,7 +37,7 @@
 
 .breakout1 {
     width: 400px;
-    top: 26%;
+    top: 20%;
     transform: rotate(20deg);
     left: 62%;
 }
@@ -74,7 +76,7 @@
 .breakoutClown3 {
     width: 350px;
     transform: none;
-    top: 28%;
+    top: 20%;
     right: 42%;
 }
 
@@ -104,6 +106,7 @@
     transform: rotate(20deg);
 }
 
+// story text
 .story {
     background-color: $secondary;
     @include insideBorder;
@@ -111,6 +114,7 @@
     padding: 0 3%;
 }
 
+// navigation images and buttons
 .navigation {
     display: flex;
     flex-direction: row;
@@ -128,6 +132,7 @@
     max-width: 50%;
 }
 
+// evening out the borders
 .navImg:first-of-type {
     border-right: 10px solid $secondary;
 }
@@ -146,6 +151,7 @@
     position: absolute;
     transform: translate(-50%, 0);
     width: 46%;
+    border: none;
 }
 
 .choice:first-of-type {
@@ -156,4 +162,219 @@
     left: 74.75%;
 }
 
+// hover state for buttons
+button:hover, button:focus {
+    background-color: $primary;
+}
+
+// responsive design
+@media (max-width: 1120px) {
+    .breakoutRoach {
+        width: 350px;
+        top: 22%;
+        right: 54%;
+    }
+
+    .breakoutClown5 {
+        width: 450px;
+        top: 28%;
+    }
+
+    .breakoutClown4 {
+        width: 400px;
+        top: 25%;
+        left: 60%;
+    }
+}
+
+@media (max-width: 969px) {
+    .breakoutRoach {
+        width: 300px;
+        top: 21%;
+        right: 54%;
+    }
+}
+
+@media (max-width: 915px) {
+    .breakout {
+        width: 150px;
+        top: 21%;
+        right: 72%;
+    }
+    
+    .breakout0 {
+        width: 400px;
+        top: 11%;
+        right: 55%;
+    }
+    
+    .breakout1 {
+        width: 300px;
+        left: 52%;
+    }
+    
+    .breakout3 {
+        top: 20%;
+        right: 55%;
+        width: 300px;
+    }
+    
+    .breakout4 {
+        width: 350px;
+        left: 50%;
+    }
+    
+    .breakoutRoach {
+        width: 300px;
+        transform: none;
+        top: 21%;
+        right: 54%;
+    }
+    
+    .breakoutClown3 {
+        width: 300px;
+        top: 20%;
+        right: 35%;
+    }
+    
+    .breakoutClown4 {
+        width: 370px;
+        top: 21%;
+        left: 50%;
+    }
+    
+    .breakoutClown5 {
+        width: 350px;
+        top: 25%;
+        right: 57%;
+    }
+    
+    .breakoutEnd {
+        width: 300px;
+        top: 11%;
+        right: 55%;
+    }
+    
+    .breakoutEnd2 {
+        top: 25%;
+    }
+}
+
+@media (max-width: 815px){
+    .breakoutRoach {
+        width: 250px;
+        top: 18%;
+        right: 50%;
+    }
+}
+
+@media (max-width: 642px){
+    .breakoutRoach {
+        width: 200px;
+        top: 18%;
+        right: 50%;
+    }
+}
+
+@media (max-width: 633px) {
+
+    .mainGraphic {
+        border-radius: 80px 80px 0 0;
+    }
+    
+    .mainImage {
+        border-radius: 60px 60px 0 0;
+    }
+
+    .breakout {
+        width: 100px;
+        top: 31%;
+    }
+
+    .breakout0 {
+        width: 300px;
+        top: 21%;
+        right: 45%;
+    }
+
+    .breakout1 {
+        width: 250px;
+        top: 30%;
+        // left: 62%;
+    }    
+
+    .breakout3 {
+        top: 25%;
+        right: 50%;
+        width: 250px;
+    }
+
+    .breakout4 {
+        width: 250px;
+        top: 25%;
+        left: 50%;
+    }
+
+    .breakoutRoach {
+        width: 200px;
+        top: 24%;
+        right: 50%;
+    }
+
+    .breakoutClown1 {
+        top: 40%;
+    }
+
+    .breakoutClown2 {
+        top: 42%;
+    }
+
+    .breakoutClown3 {
+        width: 200px;
+        top: 43%;
+        right: 35%;
+    }
+
+    .breakoutClown4 {
+        width: 220px;
+        top: 41%;
+        left: 52%;
+    }
+
+    .breakoutClown5 {
+        width: 250px;
+        top: 39%;
+        right: 50%;
+    }
+
+    .breakoutEnd {
+        width: 250px;
+        top: 25%;
+        right: 45%;
+    }
+
+    .breakoutEnd2 {
+        width: 150px;
+        top: 32%;
+    }
+
+}
+
+@media (max-width: 600px) {
+    .choice {
+        width: 49%;	
+        top: -18%;
+    }
+    .storyText {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 542px){
+    .breakoutRoach {
+        width: 150px;
+        top: 27%;
+        right: 50%;
+    }
+}
 

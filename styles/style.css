@@ -326,7 +326,7 @@ input {
 
 @media (max-width: 633px) {
   button {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
   }
 }
 
@@ -336,6 +336,9 @@ input {
   }
   input[type="submit"] {
     font-size: 2rem;
+  }
+  button {
+    font-size: 1.2rem;
   }
 }
 
@@ -631,6 +634,9 @@ input[type="submit"]:active {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   width: 92.5%;
   border: 20px solid #3e90f4;
   border-top: none;
@@ -644,7 +650,8 @@ input[type="submit"]:active {
   -webkit-box-shadow: -5px -5px #ffcc00, 5px -5px #ffcc00, -5px 5px #ffcc00, 5px 5px #ffcc00;
           box-shadow: -5px -5px #ffcc00, 5px -5px #ffcc00, -5px 5px #ffcc00, 5px 5px #ffcc00;
   border-top: none;
-  max-width: 50%;
+  width: 50%;
+  height: 35vh;
 }
 
 .navImg:first-of-type {
@@ -681,6 +688,18 @@ input[type="submit"]:active {
 
 button:hover, button:focus {
   background-color: #3e90f4;
+}
+
+footer {
+  background-color: #3e90f4;
+  color: #ffffff;
+  font-weight: 300;
+  padding: 5px 25px;
+  margin: 5% 0 0 0;
+}
+
+footer a {
+  color: #ffcc00;
 }
 
 @media (max-width: 1120px) {
@@ -736,7 +755,7 @@ button:hover, button:focus {
     width: 300px;
     -webkit-transform: none;
             transform: none;
-    top: 21%;
+    top: 23%;
     right: 54%;
   }
   .breakoutClown3 {
@@ -767,7 +786,7 @@ button:hover, button:focus {
 @media (max-width: 815px) {
   .breakoutRoach {
     width: 250px;
-    top: 18%;
+    top: 24%;
     right: 50%;
   }
 }
@@ -775,7 +794,7 @@ button:hover, button:focus {
 @media (max-width: 642px) {
   .breakoutRoach {
     width: 200px;
-    top: 18%;
+    top: 24%;
     right: 50%;
   }
 }
@@ -812,7 +831,7 @@ button:hover, button:focus {
   }
   .breakoutRoach {
     width: 200px;
-    top: 24%;
+    top: 28%;
     right: 50%;
   }
   .breakoutClown1 {
@@ -850,7 +869,6 @@ button:hover, button:focus {
 @media (max-width: 600px) {
   .choice {
     width: 49%;
-    top: -18%;
   }
   .storyText {
     margin-top: 0;
@@ -862,5 +880,8 @@ button:hover, button:focus {
     width: 150px;
     top: 27%;
     right: 50%;
+  }
+  .navImg {
+    height: 30vh;
   }
 }

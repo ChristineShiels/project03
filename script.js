@@ -177,7 +177,7 @@ storyApp.getInfo = () => {
         mainStory[0].story = `You leave work on a  beautiful day and find $50 lying on the street.`;
         mainStory[0].storyPic = `./assets/street01.jpg`;
         mainStory[0].storyAlt = `A person walking the middle of the street, jumping for joy by @dre0316 on Unsplash`;
-        mainStory[0].breakoutPic = `./assets/sun01.gif`;
+        mainStory[0].breakoutPic = `./assets/sun.gif`;
         mainStory[0].breakoutAlt = `an animated, handrawn sun`;
         mainStory[0].choice01 = `Call a taxi to zip you home to play with your pet ${userInfo.pet}`;
         mainStory[0].choice01Pic = `./assets/taxi.jpg`;
